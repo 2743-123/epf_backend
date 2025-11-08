@@ -7,13 +7,16 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+
+// ✅ CORS with environment support
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    methods: "GET,POST,PUT,DELETE",
+    origin: process.env.CORS_ORIGIN?.split(",") || ["http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
@@ -25,6 +28,6 @@ app.use("/api/epf", epfRoutes);
 AppDataSource.initialize()
   .then(() => {
     console.log("✅ Database connected");
-    app.listen(PORT, () => console.log("🚀 Server running on port 5000"));
+    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })
   .catch((err) => console.error("❌ DB Connection Error:", err));
