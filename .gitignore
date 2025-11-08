@@ -1,0 +1,55 @@
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# --- Environment files ---
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# --- Build outputs ---
+dist/
+build/
+.cache/
+.temp/
+tmp/
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- React / Vite / Next ---
+.vite/
+.next/
+out/
+
+# --- IDE / System files ---
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.DS_Store
+Thumbs.db
+
+# --- Coverage ---
+coverage/
+*.lcov
+
+# --- Database / Dumps ---
+*.sqlite
+*.db
+*.sql
+
+# --- OS specific ---
+Desktop.ini
+
+# --- Misc ---
+*.pem
+*.crt
+*.key

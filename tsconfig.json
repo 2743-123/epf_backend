@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",              // JavaScript version output
+    "module": "commonjs",            // Module system
+    "strict": true,                  // Strict type checking
+    "esModuleInterop": true,         // Allow default import compatibility
+    "skipLibCheck": true,            // Skip type checking of .d.ts files
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,        // ✅ Must have
+    "emitDecoratorMetadata": true,   
+    "outDir": "dist",
+    "rootDir": "src"    
+
+  },
+  "include": ["src"],                // TypeScript files location
+  "exclude": ["node_modules"]        // Ignore these folders
+}
