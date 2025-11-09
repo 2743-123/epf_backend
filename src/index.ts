@@ -11,7 +11,7 @@ const app = express();
 // ✅ CORS with environment support
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN?.split(",") || ["http://localhost:3000"],
+    origin: process.env.CORS_ORIGIN?.split(",") || ["https://epf-frontend.vercel.app","http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
